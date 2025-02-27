@@ -1,3 +1,4 @@
+import 'package:checkandtest/API_JsonPlaceholder/apicall.dart';
 import 'package:checkandtest/apicalling/productcontroller.dart';
 import 'package:flutter/material.dart';
 
@@ -160,6 +161,12 @@ class _MyhomepageState extends State<Myhomepage> {
             ),
           ),
         ],
+        leading: IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (_)=>apicall()));
+            },
+            icon: Icon(Icons.menu_sharp),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
